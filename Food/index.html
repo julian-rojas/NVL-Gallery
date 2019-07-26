@@ -63,9 +63,20 @@
 <!-- THE SCENE STARTS HERE -->
 
 <body>
-  <a-scene xrweb="disableWorldTracking: true" xrextras-gesture-detector="" xrextras-almost-there="" xrextras-loading="" xrextras-runtime-error="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
-    <a-camera position="0 4 10" raycaster="objects: .cantap; direction: 0.0002210346402000929 0.0008139554704044315 -0.9999996443100267; origin: 0 0 10; useWorldCoordinates: true" cursor="rayOrigin: mouse" camera="" rotation="" look-controls="" wasd-controls=""
-      data-aframe-inspector-original-camera="">
+  <a-scene xrweb="disableWorldTracking: true"
+           xrextras-gesture-detector=""
+           xrextras-almost-there=""
+           xrextras-loading=""
+           xrextras-runtime-error=""
+           inspector=""
+           keyboard-shortcuts=""
+           screenshot=""
+           vr-mode-ui="">
+
+    <a-camera position="0 4 10"
+              raycaster="objects: .cantap; direction: 0.0002210346402000929 0.0008139554704044315 -0.9999996443100267; origin: 0 0 10; useWorldCoordinates: true"
+              cursor="rayOrigin: mouse" camera="" rotation="" look-controls="" wasd-controls=""
+              data-aframe-inspector-original-camera="">
     </a-camera>
 
     <!-- THIS IS THE BANH MI PORTAL-->
@@ -97,7 +108,7 @@
 
         <!-- Portal Contents -->
         <a-entity id="portal-contents">
-          <a-entity scale="7.79501 7.79501 7.79501" position="-0.2358 2.3377 -3.04553" gltf-model="Assets/banhmi.glb" rotation="43.20771 12.984 10.71576"> </a-entity>
+          <a-entity xrextras-one-finger-rotate scale="7.79501 7.79501 7.79501" position="-0.2358 2.3377 -3.04553" gltf-model="Assets/banhmi.glb" rotation="43.20771 12.984 10.71576"> </a-entity>
           <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #eed963" geometry="" rotation="-90 0 0"></a-box>
           <a-box scale="323.45216 0.27278 0.63444" position="0 -0.41065 -0.90654" material="color: #6b345c" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
