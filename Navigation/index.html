@@ -8,8 +8,7 @@
   <!-- Links to external scripts -->
   <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
 
-  <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
-         See github.com/8thwall/web/xrextras -->
+  <!-- XR Extras - provides utilities like load screen, almost there, and error handling. See github.com/8thwall/web/xrextras -->
   <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
 
   <!-- 8thWall Web - Replace the app key here with your own app key -->
@@ -42,8 +41,7 @@
       tick: function() {
         const position = this.camera.object3D.position
         const isOutside = position.z > this.data.depth / 2
-        const withinPortalBounds =
-          position.y < this.data.height && Math.abs(position.x) < this.data.width / 2
+        const withinPortalBounds = position.y < this.data.height && Math.abs(position.x) < this.data.width / 2
 
         if (this.wasOutside != isOutside && withinPortalBounds) {
           this.isInPortalSpace = !isOutside
@@ -74,6 +72,7 @@
         <a-box scale="0.5 6 0.5" position="3 3.3 0" color="#eed963" material="" geometry="" visible="false"></a-box>
         <a-box scale="6.5 0.5 0.5" position="0 6.5 0" color="#eed963" material="" geometry="" visible="false"></a-box>
         <a-box scale="6.5 0.5 0.5" position="0 0.10967 0" color="#eed963" material="" geometry="" visible= "false"></a-box>
+
         <!-- Hider walls -->
         <a-entity id="hider-walls">
           <a-box scale="6 100 1" position="0 57 0" hider-material="" material="" geometry=""></a-box>
@@ -95,9 +94,7 @@
 
         <!-- Portal Contents -->
         <a-entity id="portal-contents">
-          <!-- THIS CONTENT WILL CHANGE UPON RECEIPT OF ASSETS -->
-          <a-entity scale="10.8083 10.8083 10.8083" position="0 0 -4" gltf-model="Assets/banhmi.glb"> </a-entity>
-          <a-image scale="6.03678 1.7531 6.03678" position="-0.01271 5.52894 -0.02089" src="Assets/LilSaigonTitle.png" material="" geometry=""></a-image>
+          <a-image scale="6.03678 1.7531 6.03678" position="-0.01271 5.52894 -0.02089" src="Assets/Break Room AR waypoint.png" material="" geometry=""></a-image>
           <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #eed963" geometry="" rotation="-90 0 0"></a-box>
           <a-box scale="323.45216 28.59715 2.28393" position="0 -0.89674 -15.54644" material="color: #6b345c" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
@@ -112,9 +109,7 @@
     <!-- END OF BREAK ROOM PORTAL-->
 
 
-
     <!-- THIS IS THE ENTRANCE MARKER PORTAL-->
-
     <a-entity xrextras-named-image-target="name: Entrance_Marker" visible="false">
       <a-entity position="0 -0.42 0" rotation="" scale="0.18 0.18 0.18">
 
@@ -144,9 +139,7 @@
 
         <!-- Portal Contents -->
         <a-entity id="portal-contents">
-
-          <!-- THIS CONTENT WILL CHANGE UPON RECEIPT OF ASSETS -->
-          <a-entity scale="10.8083 10.8083 10.8083" position="0 0 -4" gltf-model="Assets/ZilZilTibs.glb"> </a-entity>
+          <a-image scale="6.03678 1.7531 6.03678" position="-0.01271 5.52894 -0.02089" src="Assets/Entrance AR waypoint.png" material="" geometry=""></a-image>
           <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #8eab47" geometry="" rotation="-90 0 0"></a-box>
           <a-box scale="323.45216 28.59715 2.28393" position="0 -0.89674 -15.54644" material="color: #bb59a6" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
@@ -157,11 +150,7 @@
         </a-entity>
       </a-entity>
     </a-entity>
-
     <!-- END OF ENTRANCE MARKER -->
-
-
-
 
     <!-- THIS IS THE EVENT SPACE MARKER PORTAL-->
     <a-entity xrextras-named-image-target="name: Event_Space_Marker" visible="false">
@@ -186,22 +175,18 @@
           <a-box scale="9.42689 177.53988 200" position="100 50 100" hider-material="" material="" geometry=""></a-box>
         </a-entity>
 
-
         <!-- Hider Walls -->
         <a-entity id="portal-wall">
           <a-plane scale="4 6 1" rotation="180 0 0" position="0 3 0.5" hider-material="" material="" geometry=""></a-plane>
         </a-entity>
 
-
         <!-- Portal Contents -->
         <a-entity id="portal-contents">
 
-          <!-- THIS CONTENT WILL CHANGE UPON RECEIPT OF ASSETS -->
-          <a-entity scale="0.577 0.577 0.577" position="0 22 -4" gltf-model="Assets/Snapper_Piman_Bouk.glb"> </a-entity>
+          <a-image scale="6.03678 1.7531 6.03678" position="-0.01271 5.52894 -0.02089" src="Assets/Event AR waypoint.png" material="" geometry=""></a-image>
           <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #eed963" geometry="" rotation="-90 0 0"></a-box>
           <a-box scale="323.45216 28.59715 2.28393" position="0 -0.89674 -15.54644" material="color: #6b345c" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
-
 
         <!-- Portal World-->
         <a-entity id="portal-world">
@@ -209,7 +194,6 @@
         </a-entity>
       </a-entity>
     </a-entity>
-
     <!-- END OF EVENT SPACE MARKER -->
 
     <!-- THIS IS THE OFFICE MARKER-->
@@ -244,7 +228,7 @@
         <a-entity id="portal-contents">
 
           <!-- THIS CONTENT WILL CHANGE UPON RECEIPT OF ASSETS -->
-          <a-entity scale="" position="0 0 -4" gltf-model="Assets/Plant_Based_Fat_Kid.glb"> </a-entity>
+          <a-image scale="6.03678 1.7531 6.03678" position="-0.01271 5.52894 -0.02089" src="Offices AR waypoint.png" material="" geometry=""></a-image>
           <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #de9245" geometry="" rotation="-90 0 0"></a-box>
           <a-box scale="323.45216 28.59715 2.28393" position="0 -0.89674 -15.54644" material="color: #619e95" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
@@ -255,9 +239,7 @@
         </a-entity>
       </a-entity>
     </a-entity>
-
     <!-- END OF OFFICE MARKER -->
-
 
   </a-scene>
 </body>
