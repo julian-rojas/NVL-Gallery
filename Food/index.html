@@ -6,14 +6,15 @@
   <meta name="description" content="NVL Gallery Test"></meta>
 
   <!-- Links to external scripts -->
-  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+   <script src="//cdn.8thwall.com/web/aframe/8frame-0.9.0.min.js"></script>
 
+<!-- 8TH WALL FUNCTIONALITY HERE, DISABLED FOR TESTING -->
   <!-- XR Extras - provides utilities like load screen, almost there, and error handling. See github.com/8thwall/web/xrextras -->
   <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
 
   <!-- 8thWall Web - Replace the app key here with your own app key -->
-  <script src="//apps.8thwall.com/xrweb?appKey=ffwn1BJrUMSFOxZDKFsJ5ENfsQHlOxEo7vLUwBbcCKEDz1Lfkfws4ziHPSn79sTmLMknMc"></script>
-
+   <script src="//apps.8thwall.com/xrweb?appKey=ffwn1BJrUMSFOxZDKFsJ5ENfsQHlOxEo7vLUwBbcCKEDz1Lfkfws4ziHPSn79sTmLMknMc"></script>
+<!-- 8TH WALL FUNCTIONALITY HERE -->
 
   <script>
     // This creates a material that hides everything inside the portal
@@ -62,14 +63,26 @@
 <!-- THE SCENE STARTS HERE -->
 
 <body>
-  <a-scene xrweb="disableWorldTracking: true" xrextras-gesture-detector="" xrextras-almost-there="" xrextras-loading="" xrextras-runtime-error="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
-    <a-camera position="0 4 10" raycaster="objects: .cantap; direction: 0.0002210346402000929 0.0008139554704044315 -0.9999996443100267; origin: 0 0 10; useWorldCoordinates: true" cursor="rayOrigin: mouse" camera="" rotation="" look-controls="" wasd-controls=""
-      data-aframe-inspector-original-camera="">
+  <a-scene xrweb="disableWorldTracking: true"
+           xrextras-gesture-detector=""
+           xrextras-almost-there=""
+           xrextras-loading=""
+           xrextras-runtime-error=""
+           inspector=""
+           keyboard-shortcuts=""
+           screenshot=""
+           vr-mode-ui="">
+
+    <a-camera
+      position="0 4 10"
+      raycaster="objects: .cantap"
+      cursor="fuse: false; rayOrigin: mouse;">
     </a-camera>
+
 
     <!-- THIS IS THE BANH MI PORTAL-->
     <a-entity xrextras-named-image-target="name: Lil_Saigon_Marker" visible="">
-      <a-entity position="0 -0.42 0" rotation="" scale="0.18 0.18 0.18">
+      <a-entity position="0 -0.58 0" rotation="" scale="0.18 0.18 0.18">
 
         <a-box scale="0.5 6 0.5" position="-3 3.3 0" color="#eed963" material="" geometry="" visible="false"></a-box>
         <a-box scale="0.5 6 0.5" position="3 3.3 0" color="#eed963" material="" geometry="" visible="false"></a-box>
@@ -79,9 +92,9 @@
         <a-entity id="hider-walls">
           <a-box scale="6 100 1" position="0 57.69268 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="6 100 1" position="0 -50.25858 0" hider-material="" material="" geometry=""></a-box>
-          <a-box scale="94 177.65768 1" position="-50 50 0" hider-material="" material="" geometry=""></a-box>
+          <a-box scale="94 177.65768 1" position="-49.5 50 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="94 100 1" position="1.36307 23.31382 -335.17321" hider-material="" material="" geometry=""></a-box>
-          <a-box scale="94 172.14135 1" position="50 50 0" hider-material="" material="" geometry=""></a-box>
+          <a-box scale="94 172.14135 1" position="49.5 50 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 168.67095 1" position="0 50 200" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 23.71678 201" position="0 129.00999 100" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 68.86432 199" position="0 -68.89878 100" hider-material="" material="" geometry=""></a-box>
@@ -96,7 +109,8 @@
 
         <!-- Portal Contents -->
         <a-entity id="portal-contents">
-          <a-entity scale="7.79501 7.79501 7.79501" position="-0.2358 2.3377 -5.99966" gltf-model="Assets/banhmi.glb" rotation="43.20771 12.984 10.71576"> </a-entity>
+          <a-image scale="5.12558 1.52877 -5.59951" position="-0.01271 6.20026 -0.38333" src="Assets/LilSaigonTitle.png" material="" geometry=""></a-image>
+          <a-image scale="2.55905 1.52877 -5.59951" position="1.12056 0.87072 -0.58041" src="Assets/Lil_Saigon_Text.png" material="" geometr="" y="" geometry=""></a-image> <a-entity xrextras-one-finger-rotate scale="7.79501 7.79501 7.79501" position="-0.2358 2.3377 -3.04553" gltf-model="Assets/banhmi.glb" rotation="43.20771 12.984 10.71576"> </a-entity>
           <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #eed963" geometry="" rotation="-90 0 0"></a-box>
           <a-box scale="323.45216 0.27278 0.63444" position="0 -0.41065 -0.90654" material="color: #6b345c" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
@@ -111,20 +125,20 @@
 
     <!-- THIS IS THE TIBS PORTAL-->
     <a-entity xrextras-named-image-target="name: Lil_Africa_Marker" visible="false">
-      <a-entity position="0 -0.42 0" rotation="" scale="0.18 0.18 0.18">
+      <a-entity position="0 -0.58 0" rotation="" scale="0.18 0.18 0.18">
 
-        <a-box scale="0.5 6 0.5" position="-3 3.3 0" color="#8eab47" material="" geometry="" visible="false"></a-box>
-        <a-box scale="0.5 6 0.5" position="3 3.3 0" color="#8eab47" material="" geometry="" visible="false"></a-box>
-        <a-box scale="6.5 0.5 0.5" position="0 6.5 0" color="#8eab47" material="" geometry="" visible="false"></a-box>
-        <a-box scale="6.5 0.5 0.5" position="0 0.10967 0" color="#8eab47" material="" geometry="" visible="false"></a-box>
+        <a-box scale="0.5 6 0.5" position="-3 3.3 0" color="#8dab48" material="" geometry="" visible="false"></a-box>
+        <a-box scale="0.5 6 0.5" position="3 3.3 0" color="#8dab48" material="" geometry="" visible="false"></a-box>
+        <a-box scale="6.5 0.5 0.5" position="0 6.5 0" color="#8dab48" material="" geometry="" visible="false"></a-box>
+        <a-box scale="6.5 0.5 0.5" position="0 0.10967 0" color="#8dab48" material="" geometry="" visible="false"></a-box>
 
         <!-- Hider walls -->
         <a-entity id="hider-walls">
           <a-box scale="6 100 1" position="0 57.69268 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="6 100 1" position="0 -50.25858 0" hider-material="" material="" geometry=""></a-box>
-          <a-box scale="94 177.65768 1" position="-50 50 0" hider-material="" material="" geometry=""></a-box>
+          <a-box scale="94 177.65768 1" position="-49.5 50 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="94 100 1" position="1.36307 23.31382 -335.17321" hider-material="" material="" geometry=""></a-box>
-          <a-box scale="94 172.14135 1" position="50 50 0" hider-material="" material="" geometry=""></a-box>
+          <a-box scale="94 172.14135 1" position="49.5 50 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 168.67095 1" position="0 50 200" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 23.71678 201" position="0 129.00999 100" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 68.86432 199" position="0 -68.89878 100" hider-material="" material="" geometry=""></a-box>
@@ -139,8 +153,10 @@
 
         <!-- Portal Contents -->
         <a-entity id="portal-contents">
-          <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #bcdb7a" geometry="" rotation="-90 0 0"></a-box>
-          <a-entity scale="1.10044 1.10044 1.10044" position="0.57527 3.32113 -3.48442" gltf-model="Assets/ZilZilTibs.glb" rotation="35.58513 -18.45 -17.63"> </a-entity>
+          <a-image scale="5.12558 1.52877 -5.59951" position="-0.01271 6.20026 -0.38333" src="Assets/LilAfriaTitle.png" material="" geometry=""></a-image>
+          <a-image scale="2.55905 1.52877 -5.59951" position="1.12056 0.87072 -0.58041" src="Assets/Lil_Africa_Text.png" material="" geometr="" y="" geometry=""></a-image>
+          <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #8dab48" geometry="" rotation="-90 0 0"></a-box>
+          <a-entity xrextras-one-finger-rotate scale="1.10044 1.10044 1.10044" position="0.57527 3.32113 -3.48442" gltf-model="Assets/ZilZilTibs.glb" rotation="35.58513 -18.45 -17.63"> </a-entity>
           <a-box scale="323.45216 0.27278 0.63444" position="0 -0.41065 -0.90654" material="color: #bb59a6" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
 
@@ -154,7 +170,7 @@
 
     <!-- THIS IS THE SALTED FISH PORTAL-->
     <a-entity xrextras-named-image-target="name: Lil_Haiti_Marker" visible="false">
-      <a-entity position="0 -0.42 0" rotation="" scale="0.18 0.18 0.18">
+      <a-entity position="0 -0.58 0" rotation="" scale="0.18 0.18 0.18">
 
         <a-box scale="0.5 6 0.5" position="-3 3.3 0" color="#eed963" material="" geometry="" visible="false"></a-box>
         <a-box scale="0.5 6 0.5" position="3 3.3 0" color="#eed963" material="" geometry="" visible="false"></a-box>
@@ -165,9 +181,9 @@
         <a-entity id="hider-walls">
           <a-box scale="6 100 1" position="0 57.69268 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="6 100 1" position="0 -50.25858 0" hider-material="" material="" geometry=""></a-box>
-          <a-box scale="94 177.65768 1" position="-50 50 0" hider-material="" material="" geometry=""></a-box>
+          <a-box scale="94 177.65768 1" position="-49.5 50 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="94 100 1" position="1.36307 23.31382 -335.17321" hider-material="" material="" geometry=""></a-box>
-          <a-box scale="94 172.14135 1" position="50 50 0" hider-material="" material="" geometry=""></a-box>
+          <a-box scale="94 172.14135 1" position="49.5 50 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 168.67095 1" position="0 50 200" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 23.71678 201" position="0 129.00999 100" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 68.86432 199" position="0 -68.89878 100" hider-material="" material="" geometry=""></a-box>
@@ -182,7 +198,10 @@
 
         <!-- Portal Contents -->
         <a-entity id="portal-contents">
-          <a-entity scale="0.45635 0.45635 0.45635" position="-0.31156 4.17044 14.01229" gltf-model="Assets/Snapper_Piman_Bouk.glb" rotation="-56.52056761627032 93.75766767961765 84.14744658188836"> </a-entity>
+          <a-image scale="5.12558 1.52877 -5.59951" position="-0.01271 6.20026 -0.38333" src="Assets/LilHaitiTitle.png" material="" geometry=""></a-image>
+          <a-image scale="2.55905 1.52877 -5.59951" position="1.12056 0.87072 -0.58041" src="Assets/Lil_Haiti_Text.png" material="" geometr="" y="" geometry=""></a-image>
+          <a-entity xrextras-one-finger-rotate="" scale="0.36196 0.36196 0.36196" position="0.08052 4.17044 -2.72386" rotation="-56.52056761627032 93.43184921987604 84.14744658188836" class="cantap">
+          <a-gltf-model src="Assets/Snapper_Piman_Bouk.glb" position="-2.07061 39.65444 -1.31196" <="" a-gltf-model="" gltf-model="Assets/Snapper_Piman_Bouk.glb"></a-gltf-model></a-entity>
           <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #4187b3" geometry="" rotation="-90 0 0"></a-box>
           <a-box scale="323.45216 0.27278 0.63444" position="0 -0.41065 -0.90654" material="color: #eed963" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
@@ -197,7 +216,7 @@
 
     <!-- THIS IS THE PLANT KID PORTAL-->
     <a-entity xrextras-named-image-target="name: Lil_Arabia_Marker" visible="false">
-      <a-entity position="0 -0.42 0" rotation="" scale="0.18 0.18 0.18">
+      <a-entity position="0 -0.58 0" rotation="" scale="0.18 0.18 0.18">
 
         <a-box scale="0.5 6 0.5" position="-3 3.3 0" color="#de9245" material="" geometry="" visible="false"></a-box>
         <a-box scale="0.5 6 0.5" position="3 3.3 0" color="#de9245" material="" geometry="" visible="false"></a-box>
@@ -208,9 +227,9 @@
         <a-entity id="hider-walls">
           <a-box scale="6 100 1" position="0 57.69268 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="6 100 1" position="0 -50.25858 0" hider-material="" material="" geometry=""></a-box>
-          <a-box scale="94 177.65768 1" position="-50 50 0" hider-material="" material="" geometry=""></a-box>
+          <a-box scale="94 177.65768 1" position="-49.5 50 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="94 100 1" position="1.36307 23.31382 -335.17321" hider-material="" material="" geometry=""></a-box>
-          <a-box scale="94 172.14135 1" position="50 50 0" hider-material="" material="" geometry=""></a-box>
+          <a-box scale="94 172.14135 1" position="49.5 50 0" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 168.67095 1" position="0 50 200" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 23.71678 201" position="0 129.00999 100" hider-material="" material="" geometry=""></a-box>
           <a-box scale="200 68.86432 199" position="0 -68.89878 100" hider-material="" material="" geometry=""></a-box>
@@ -225,7 +244,9 @@
 
         <!-- Portal Contents -->
         <a-entity id="portal-contents">
-          <a-entity scale="0.60354 0.60354 0.60354" position="-0.3664 3.29413 -6.18703" gltf-model="Assets/Plant_Based_Fat_Kid.glb" rotation="-23.02678 -118.23769 -44.7191"> </a-entity>
+          <a-image scale="5.12558 1.52877 -5.59951" position="-0.01271 6.20026 -0.38333" src="Assets/LilArabiaTitle.png" material="" geometry=""></a-image>
+          <a-image scale="2.55905 1.52877 -5.59951" position="1.12056 0.87072 -0.58041" src="Assets/Lil_Arabia_Text.png" material="" geometr="" y="" geometry=""></a-image>
+          <a-entity xrextras-one-finger-rotate scale="0.60354 0.60354 0.60354" position="-0.3664 3.29413 -6.18703" gltf-model="Assets/Plant_Based_Fat_Kid.glb" rotation="-23.02678 -118.23769 -44.7191"> </a-entity>
           <a-box scale="323.45216 28.59715 244.42697" position="0 48.79539 -49.90668" material="color: #de9245" geometry="" rotation="-90 0 0"></a-box>
           <a-box scale="323.45216 0.27278 0.63444" position="0 -0.41065 -0.90654" material="color: #619e95" geometry="" rotation="-90 0 0"></a-box>
         </a-entity>
